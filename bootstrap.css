@@ -1,0 +1,305 @@
+body {
+    position: relative;
+    background-image: url(./assets/images/background.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(1px);
+    background: #00000099;
+}
+
+.logoImg {
+    width: 18rem;
+    height: 4.4rem;
+    aspect-ratio: auto;
+}
+
+.nav-link {
+    font-size: 1.6rem;
+    color: var(--lightColor) !important;
+}
+
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.navbar-nav .nav-item::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 4px;
+    background-color: var(--secondaryColor);
+    transition: width 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-item:hover::after {
+    width: 100%;
+}
+
+.navbar {
+    padding: 1rem 5rem;
+}
+
+.jumbotron {
+    padding: 16rem 3rem 21rem 3rem;
+    max-width: 90%;
+}
+
+.jumbotron h1 {
+    font-size: 4rem;
+    color: var(--lightColor) !important;
+    line-height: 6rem;
+    /* line-height: 1.6rem; */
+}
+
+span {
+    color: var(--primaryColor);
+}
+
+.jumbotron .btn {
+    background-color: transparent;
+    font-size: 1.6rem;
+    color: var(--lightColor);
+    border: 2px solid var(--lightColor);
+    border-radius: 10rem;
+}
+
+.btn {
+    background-color: var(--blackColor);
+    font-size: 1.4rem;
+    border: 2px solid var(--primaryColor);
+    border-radius: 1rem;
+}
+
+.btn:hover {
+    background-color: var(--primaryColor);
+    border: 2px solid var(--primaryColor);
+}
+
+.nav {
+    backdrop-filter: blur(2.5rem);
+    background: #14141494;
+}
+
+.about,
+.whyChoose,
+.ourService,
+.ourClients,
+.contact,
+.copyrights {
+    background: transparent;
+    background-color: #0f0f0fbc;
+}
+
+.heading h2 {
+    font-size: 4rem;
+    color: var(--lightColor);
+}
+
+.aboutImg {
+    width: 40rem;
+}
+
+.text,
+.card-text {
+    font-size: 1.6rem;
+    color: var(--lightColor);
+}
+
+.title {
+    font-size: 2.5rem;
+    color: var(--lightColor);
+}
+
+.chooseImg {
+    width: 12rem;
+}
+
+.whyChoose .card {
+    background-color: transparent;
+}
+
+.whyChoose .card-text {
+    font-size: 1.3rem;
+    color: var(--lightColor);
+}
+
+.card-title {
+    font-size: 2rem;
+    color: var(--lightColor);
+}
+
+.ourService .card-title {
+    font-size: 2rem;
+    color: var(--lightColor);
+}
+
+.card {
+    width: 60rem;
+    height: 15rem;
+    border: 1px solid var(--primaryColor);
+    border-radius: 1rem;
+}
+
+.card-img-top {
+    width: auto;
+    aspect-ratio: 80/80;
+    height: 8rem;
+}
+
+.service-card {
+    width: 30rem;
+    height: 22rem;
+    border: 1px solid var(--primaryColor);
+    border-radius: 1rem;
+}
+
+.service-card .card-text {
+    font-size: 1.4rem;
+}
+
+.client img {
+    width: 20rem;
+}
+
+.form-control {
+    background-color: var(--darkColor);
+    font-size: 1.6rem;
+    border-radius: 0.8rem;
+    padding: 2rem;
+}
+
+.list-item {
+    color: var(--lightColor);
+}
+
+.list-item i {
+    color: var(--secondaryColor);
+    padding-right: 1rem;
+}
+
+.rights p {
+    color: var(--lightColor);
+}
+
+/* ::::: RESPONSIVE DESIGN DEVICE SIZES ::::: */
+/* for Responsive Target the ROW Code (display:grid) */
+
+/* Small devices (landscape phones, upto 576px and below) */
+/* @media (width <=576px) */
+@media (max-width: 576px) {
+
+    .grid-1,
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+
+    .client img {
+        width: 15rem;
+    }
+
+    .card {
+        width: auto;
+        height: fit-content;
+    }
+
+    .service-card {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .whyChoose .card-title {
+        font-size: 1.6rem;
+    }
+
+    .chooseImg {
+        width: 8rem;
+        padding-top: 1.6rem;
+    }
+
+    .about .text {
+        text-align: justify;
+        line-height: 3rem;
+    }
+
+    .jumbotron {
+        display: flex;
+        flex-direction: column;
+        align-items: justify;
+        justify-content: center;
+        text-align: center;
+        padding: 11rem 1rem 6rem 3rem;
+    }
+
+    .jumbotron h1 {
+        font-size: 3rem;
+        width: 100%;
+        line-height: 4.5rem;
+    }
+
+    .jumbotron .btn {
+        background-color: transparent;
+        font-size: 1.6rem;
+        color: var(--lightColor);
+        border: 2px solid var(--lightColor);
+        border-radius: 10rem;
+    }
+
+    .navbar {
+        padding: 0rem 0rem;
+    }
+
+    .navbar-toggler {
+        border: none;
+    }
+
+    .navbar-toggler-icon {
+        /* background-color: var(--lightColor); */
+        filter: invert(100%);
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .logoImg {
+        width: 14rem;
+        height: 4rem;
+    }
+}
+
+/* Medium devices (tablets, upto 768px and above) */
+/* @media (min-width: 577px) and (max-width: 768px) */
+@media (width >=577px) and (width <=768px) {
+    /* write code here */
+}
+
+/* Large devices (Laptops, upto 992px and above) */
+/* @media (min-width: 769px) and (max-width: 992px) */
+@media (width >=769px) and (width <=992px) {
+    /* write code here */
+}
+
+/* X-Large devices (large desktops, upto 1200px and above) */
+/* @media (min-width: 993px) and (max-width: 1200px) */
+@media (width >=993px) and (width <=1200px) {
+    /* write code here */
+}
+
+/* XX-Large devices (larger desktops, upto 1400px and above) */
+/* @media (min-width: 1200px)  */
+@media (width >=1200px) {
+    /* write code here */
+}
